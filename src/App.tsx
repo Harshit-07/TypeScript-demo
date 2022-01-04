@@ -1,24 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Greet from './components/greet';
+// import Person from './components/person';
+// import Persons from './components/persons';
+import Status from './components/status';
+import Heading from './components/heading';
+import Oscar from './components/oscar';
 
 function App() {
+
+  // for objects
+  const fullName = {
+    first:'Bruce',
+    last:'Wayne'
+  }
+
+  // for arrays
+  const personsName = [
+    {
+      first:'Bruce',
+      last:'Wayne'
+    },
+    {
+      first:'Tony',
+      last:'Stark'
+    },
+    {
+      first:'Tim',
+      last:'Cook'
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Greet name='Harshit' greetCount={20} isLoggedIn={true}/> */}
+      {/* <Person name={fullName}/> */}
+      {/* <Persons names={personsName}/> */}
+      {/* <Status message='success'/> */}
+      {/* Single Children */}
+      {/* <Heading>PlaceHolder Text</Heading> */}
+      {/* Nested Children */}
+      <Oscar>
+        <Heading>This is Oscar Component</Heading>
+      </Oscar>
     </div>
   );
 }
